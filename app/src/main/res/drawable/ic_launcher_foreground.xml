@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Rotation mark: a record. Drawn as a vector so it stays sharp at
+     every launcher size. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:pathData="M54,21 a33,33 0 1,0 0,66 a33,33 0 1,0 0,-66 Z" android:fillColor="#12121A" />
+    <path android:pathData="M54,26 a28,28 0 1,0 0,56 a28,28 0 1,0 0,-56 Z"
+          android:strokeColor="#3A3A4A" android:strokeWidth="1.4"
+          android:fillColor="#00000000" />
+    <path android:pathData="M54,31 a23,23 0 1,0 0,46 a23,23 0 1,0 0,-46 Z"
+          android:strokeColor="#3A3A4A" android:strokeWidth="1.4"
+          android:fillColor="#00000000" />
+    <path android:pathData="M54,36 a18,18 0 1,0 0,36 a18,18 0 1,0 0,-36 Z"
+          android:strokeColor="#3A3A4A" android:strokeWidth="1.4"
+          android:fillColor="#00000000" />
+    <path android:pathData="M54,43 a11,11 0 1,0 0,22 a11,11 0 1,0 0,-22 Z" android:fillColor="#FF5A3C" />
+    <path android:pathData="M54,51.2 a2.8,2.8 0 1,0 0,5.6 a2.8,2.8 0 1,0 0,-5.6 Z" android:fillColor="#0A0A0F" />
+</vector>
