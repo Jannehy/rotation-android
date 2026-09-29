@@ -4,9 +4,7 @@ A native Jetpack Compose client for a [Rotation](https://github.com/Jannehy/rota
 server — your listening year, from your pocket.
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=org.rotationmusic.app">
-    <img src="docs/google-play-badge.svg" height="48" alt="Get it on Google Play">
-  </a>
+  <a href="https://play.google.com/store/apps/details?id=org.rotationmusic.app"><img src="docs/google-play-badge.svg" width="163" height="48" alt="Get it on Google Play"></a>
 </p>
 
 <p align="center">
