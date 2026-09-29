@@ -4,6 +4,12 @@ A native Jetpack Compose client for a [Rotation](https://github.com/Jannehy/rota
 server — your listening year, from your pocket.
 
 <p align="center">
+  <a href="https://play.google.com/store/apps/details?id=org.rotationmusic.app">
+    <img src="docs/google-play-badge.svg" height="48" alt="Get it on Google Play">
+  </a>
+</p>
+
+<p align="center">
   <img src="docs/screenshots/01-overview.png" width="24%" alt="Overview">
   <img src="docs/screenshots/02-artist.png" width="24%" alt="Artist detail">
   <img src="docs/screenshots/03-wrapped.png" width="24%" alt="The yearly recap">
@@ -36,9 +42,9 @@ listening year, complete with recap, entirely on the device.
 
 ## Installing
 
-From Google Play, once the app is through review. Or take the APK from the
-[latest release](../../releases/latest), open it and allow the install once —
-updates then land straight over the previous version.
+From [Google Play](https://play.google.com/store/apps/details?id=org.rotationmusic.app) — updates then arrive by themselves. Or take the
+APK from the [latest release](../../releases/latest), open it and allow the
+install once; later APKs install straight over the previous version.
 
 ## Connecting
 
