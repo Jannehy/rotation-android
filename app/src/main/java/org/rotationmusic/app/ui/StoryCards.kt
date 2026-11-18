@@ -380,6 +380,15 @@ fun QuizCard(question: String, right: String, others: List<String>,
     }
 }
 
+/**
+ * The width the buttons under the picture share.
+ *
+ * They used to take three quarters of the card, which left a label that needs
+ * two lines looking cramped next to the picture above it. The cap keeps a
+ * tablet from drawing a button the whole width of the screen.
+ */
+private val storyButtonWidth = Modifier.fillMaxWidth().widthIn(max = 420.dp)
+
 /** The last card: the picture, a way to share it, and a way out. */
 @Composable
 fun StoryFinale(data: Wrapped, context: StoryContext) {
@@ -417,12 +426,14 @@ fun StoryFinale(data: Wrapped, context: StoryContext) {
                       .fillMaxWidth(0.62f)
                       .clip(RoundedCornerShape(14.dp)))
             Button(onClick = { shareBitmap(android, bitmap, data.year) },
-                   modifier = Modifier.fillMaxWidth(0.75f)) {
-                Text(stringResource(R.string.wrapped_share))
+                   modifier = storyButtonWidth) {
+                Text(stringResource(R.string.wrapped_share),
+                     textAlign = TextAlign.Center,
+                     modifier = Modifier.fillMaxWidth())
             }
         }
         WrappedPlaylistButton(data, context.session, onDark = true,
-                              modifier = Modifier.fillMaxWidth(0.75f))
+                              modifier = storyButtonWidth)
         Text(stringResource(R.string.story_close),
              style = MaterialTheme.typography.bodyMedium,
              color = Color.White.copy(alpha = 0.7f),

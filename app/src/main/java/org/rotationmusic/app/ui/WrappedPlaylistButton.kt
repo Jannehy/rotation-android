@@ -113,7 +113,11 @@ fun WrappedPlaylistButton(
                         color = MaterialTheme.colorScheme.onPrimary,
                     )
                 } else {
-                    Text(stringResource(R.string.wrapped_playlist_add).format(info.size))
+                    // Centred so that a label long enough to wrap – it is on a
+                    // narrow phone – does not sit left under its own first line.
+                    Text(stringResource(R.string.wrapped_playlist_add).format(info.size),
+                         textAlign = TextAlign.Center,
+                         modifier = Modifier.fillMaxWidth())
                 }
             }
         }
