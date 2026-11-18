@@ -51,6 +51,14 @@ interface Source {
     suspend fun writePlaylist(range: String, language: String): PlaylistWritten
     /** Stops looking after it – the playlist itself stays in Navidrome. */
     suspend fun dropPlaylist(range: String)
+
+    /**
+     * Writes the year's most played songs into Navidrome, in order.
+     *
+     * Asking twice rewrites the same playlist instead of leaving a copy
+     * behind, so the button may be pressed again without worry.
+     */
+    suspend fun wrappedPlaylist(year: Int, language: String): WrappedPlaylistWritten
 }
 
 sealed class SourceException(message: String? = null) : Exception(message) {

@@ -65,6 +65,30 @@ data class PlaylistWritten(
     val tracks: Int = 0,
 )
 
+/**
+ * The recap playlist of one year.
+ *
+ * Unlike a [ManagedPlaylist] this one is a snapshot: it is written when it is
+ * asked for and never refreshed on its own, because a year that is over does
+ * not change. [exists] says whether it has been written already.
+ */
+@Serializable
+data class WrappedPlaylist(
+    val year: Int = 0,
+    val size: Int = 0,
+    val exists: Boolean = false,
+    val name: String = "",
+    val tracks: Int = 0,
+    @SerialName("created_at") val createdAt: Long = 0,
+)
+
+@Serializable
+data class WrappedPlaylistWritten(
+    val ok: Boolean = false,
+    val playlist: WrappedPlaylist = WrappedPlaylist(),
+    val tracks: Int = 0,
+)
+
 @Serializable
 data class RangeInfo(
     val key: String = "",
@@ -206,6 +230,11 @@ data class Wrapped(
     @SerialName("artist_track") val artistTrack: TrackEntry? = null,
     /** The song behind the genre card. */
     @SerialName("genre_track") val genreTrack: TrackEntry? = null,
+    /**
+     * Null where there is nothing to write: a friend's year is not ours to
+     * put into playlists, and the demo has no Navidrome behind it.
+     */
+    val playlist: WrappedPlaylist? = null,
     @SerialName("has_data") val hasData: Boolean = false,
 )
 

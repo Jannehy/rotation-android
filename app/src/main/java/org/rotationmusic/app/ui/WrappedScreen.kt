@@ -198,6 +198,16 @@ fun WrappedScreen(session: Session) {
                 }
             }
 
+            // Only where there is something to write: a friend's year is not
+            // ours to put into playlists, and the demo has no library.
+            if (wrapped.playlist != null) {
+                item {
+                    RotationCard(stringResource(R.string.wrapped_playlist_card)) {
+                        WrappedPlaylistButton(wrapped, session)
+                    }
+                }
+            }
+
             // The picture last, with its colours and its button right there.
             card?.let { bitmap ->
                 item {

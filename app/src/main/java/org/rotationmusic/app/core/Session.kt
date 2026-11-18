@@ -2,6 +2,7 @@ package org.rotationmusic.app.core
 
 import android.content.Context
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
@@ -28,6 +29,16 @@ class Session(context: Context) : ViewModel() {
     var errorRes by mutableStateOf<Int?>(null)
     var isWorking by mutableStateOf(false)
         private set
+
+    /**
+     * The recap playlists written during this run, by year.
+     *
+     * The same button sits on the last story card and at the foot of the
+     * recap. Pressing it in one place has to settle the other, and the recap
+     * is not fetched again when the story closes – so the answer lives here
+     * rather than in either screen.
+     */
+    val wrappedPlaylists = mutableStateMapOf<Int, WrappedPlaylist>()
 
     val scope: CoroutineScope get() = viewModelScope
     val isDemo: Boolean get() = source?.isDemo == true

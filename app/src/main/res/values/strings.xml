@@ -83,6 +83,11 @@
     <string name="wrapped_new">New to you</string>
     <string name="wrapped_devotion">%1$d%% of everything you played</string>
     <string name="wrapped_compared">compared with %1$d</string>
+    <string name="wrapped_playlist_card">The year as a playlist</string>
+    <string name="wrapped_playlist_hint">The %1$d most played songs of %2$d, in that order, written into your library.</string>
+    <string name="wrapped_playlist_add">Save the top %1$d as a playlist</string>
+    <string name="wrapped_playlist_done">%1$s is in your playlists – %2$d tracks, in order.</string>
+    <string name="wrapped_playlist_again">Write it again</string>
 
     <string name="settings_discoverable">Findable by others</string>
     <string name="settings_discoverable_hint">Switched off you appear in no suggestion list. Existing friendships stay.</string>

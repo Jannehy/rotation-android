@@ -80,6 +80,11 @@
     <string name="wrapped_new">Neu für dich</string>
     <string name="wrapped_devotion">%1$d%% deiner Wiedergaben gingen an eine Person</string>
     <string name="wrapped_compared">gegenüber %1$d</string>
+    <string name="wrapped_playlist_card">Das Jahr als Playlist</string>
+    <string name="wrapped_playlist_hint">Die %1$d meistgehörten Songs aus %2$d, in genau dieser Reihenfolge, in deine Bibliothek geschrieben.</string>
+    <string name="wrapped_playlist_add">Top %1$d als Playlist speichern</string>
+    <string name="wrapped_playlist_done">%1$s stehen in deinen Playlists – %2$d Titel, der Reihe nach.</string>
+    <string name="wrapped_playlist_again">Neu schreiben</string>
 
     <string name="settings_discoverable">Für andere auffindbar</string>
     <string name="settings_discoverable_hint">Ausgeschaltet erscheinst du in keiner Vorschlagsliste. Bestehende Freundschaften bleiben bestehen.</string>

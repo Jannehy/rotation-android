@@ -191,6 +191,9 @@ class Api(val base: HttpUrl) : Source {
     override suspend fun writePlaylist(range: String, language: String): PlaylistWritten =
         post("api", "playlists", body = mapOf("range" to range, "lang" to language))
 
+    override suspend fun wrappedPlaylist(year: Int, language: String): WrappedPlaylistWritten =
+        post("api", "wrapped", "playlist", body = mapOf("year" to year, "lang" to language))
+
     override suspend fun dropPlaylist(range: String) {
         send<OkResponse>(Request.Builder().url(url("api", "playlists", range)).delete().build())
     }

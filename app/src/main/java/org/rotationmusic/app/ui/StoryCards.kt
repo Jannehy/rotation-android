@@ -421,6 +421,8 @@ fun StoryFinale(data: Wrapped, context: StoryContext) {
                 Text(stringResource(R.string.wrapped_share))
             }
         }
+        WrappedPlaylistButton(data, context.session, onDark = true,
+                              modifier = Modifier.fillMaxWidth(0.75f))
         Text(stringResource(R.string.story_close),
              style = MaterialTheme.typography.bodyMedium,
              color = Color.White.copy(alpha = 0.7f),

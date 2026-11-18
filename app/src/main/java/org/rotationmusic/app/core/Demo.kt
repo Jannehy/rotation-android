@@ -407,6 +407,8 @@ class DemoSource private constructor(private val library: Library) : Source {
     override suspend fun writePlaylist(range: String, language: String): PlaylistWritten =
         throw SourceException.Forbidden
     override suspend fun dropPlaylist(range: String) {}
+    override suspend fun wrappedPlaylist(year: Int, language: String): WrappedPlaylistWritten =
+        throw SourceException.Forbidden
 
     override suspend fun compare(userId: String, period: Period): Comparison {
         val (start, end, days) = bounds(period)
